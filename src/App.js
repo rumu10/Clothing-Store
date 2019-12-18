@@ -5,8 +5,8 @@ import './App.css';
 import Homepage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component'
 import Header from './component/header/header.component.jsx';
-import SignInAndSignUpPage from './pages/signin-and-signup/signin-and-signup.component'
-import {auth} from './firebase/firebase.util'
+import SignInAndSignUpPage from './pages/signin-and-signup/signin-and-signup.component';
+import {auth} from './firebase/firebase.util';
 
 class App extends React.Component {
   constructor(){
@@ -19,7 +19,7 @@ class App extends React.Component {
 
   unsubscrimeFromAuth= null;
 
-  componentDidUpdate(){
+  componentDidMount(){
     this.unsubscrimeFromAuth=auth.onAuthStateChanged(user => {
       this.setState({
         currentUser:user
