@@ -59,8 +59,7 @@ class App extends React.Component {
               )
             }
           />
-        </Switch>
-        
+        </Switch>        
       </div>
     );
   }
